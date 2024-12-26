@@ -1,0 +1,29 @@
+name: ${project.name}
+description: ${project.description}
+version: ${project.version}
+main: com.ranull.petshop.PetShop
+author: Ranull
+api-version: 1.13
+depend: [Vault]
+
+commands:
+  petshop:
+    description: PetShop info
+    default: true
+    usage: /petshop
+  petshopreload:
+    description: PetShop reload
+    default: op
+    usage: /petshop reload
+    permission: petshop.reload
+
+permissions:
+  petshop.buy:
+    default: true
+    description: Buy pets
+  petshop.sell:
+    default: true
+    description: Sell pets
+  petshop.reload:
+    default: op
+    description: Reload PetShop
